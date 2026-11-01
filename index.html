@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🇻🇳 越南會安與峴港 6日親子慢遊</title>
+  
+  <!-- Google Fonts: Zen Maru Gothic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Base Typography & Custom Theme Variables */
+    :root {
+      --bg-paper: #FAF7F0;
+      --stroke-dark: #2D3748;
+      --accent-lantern: #E56B6F;
+      --accent-yellow: #F4A261;
+      --accent-green: #2A9D8F;
+      --accent-blue: #4A90E2;
+      --accent-purple: #B5838D;
+    }
+
+    body {
+      font-family: 'Zen Maru Gothic', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-paper);
+      color: var(--stroke-dark);
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
+    }
+
+    /* Hand-drawn Doodle Style Elements */
+    .border-doodle {
+      border: 3px solid var(--stroke-dark);
+      border-radius: 20px;
+      box-shadow: 4px 4px 0px var(--stroke-dark);
+      background-color: #FFFFFF;
+    }
+
+    .border-doodle-sm {
+      border: 2.5px solid var(--stroke-dark);
+      border-radius: 14px;
+      box-shadow: 3px 3px 0px var(--stroke-dark);
+    }
+
+    .border-doodle-btn {
+      border: 2px solid var(--stroke-dark);
+      box-shadow: 2px 2px 0px var(--stroke-dark);
+      transition: all 0.15s ease;
+    }
+
+    .border-doodle-btn:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0px var(--stroke-dark);
+    }
+
+    /* Animations */
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(1.5deg); }
+    }
+
+    @keyframes swing {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+
+    .animate-float {
+      animation: float-slow 4s ease-in-out infinite;
+    }
+
+    .animate-swing {
+      transform-origin: top center;
+      animation: swing 3s ease-in-out infinite;
+    }
+
+    /* Tab Engines */
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    .day-panel {
+      display: none;
+    }
+    .day-panel.active {
+      display: block;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="pb-28 pt-2 px-3 max-w-md mx-auto min-h-screen relative">
+
+  <!-- HEADER HEADER -->
+  <header class="bg-[#FFFDF9] border-doodle p-4 mb-4 text-center relative overflow-hidden">
+    <div class="relative w-full h-24 flex items-center justify-center">
+      <svg viewBox="0 0 360 110" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sun -->
+        <circle cx="180" cy="45" r="32" fill="#FFE29A" stroke="#2D3748" stroke-width="3" />
+        
+        <!-- Hoi An Lantern Left -->
+        <g class="animate-swing">
+          <line x1="50" y1="0" x2="50" y2="30" stroke="#2D3748" stroke-width="2"/>
+          <ellipse cx="50" cy="45" rx="14" ry="18" fill="#E56B6F" stroke="#2D3748" stroke-width="2.5"/>
+          <line x1="50" y1="63" x2="50" y2="75" stroke="#E56B6F" stroke-width="3"/>
+        </g>
+
+        <!-- Hoi An Lantern Right -->
+        <g class="animate-swing" style="animation-delay: -1.5s;">
+          <line x1="310" y1="0" x2="310" y2="28" stroke="#2D3748" stroke-width="2"/>
+          <ellipse cx="310" cy="42" rx="12" ry="15" fill="#2A9D8F" stroke="#2D3748" stroke-width="2.5"/>
+          <line x1="310" y1="57" x2="310" y2="67" stroke="#2A9D8F" stroke-width="3"/>
+        </g>
+
+        <!-- Coconut Boat with Family -->
+        <g class="animate-float">
+          <ellipse cx="180" cy="88" rx="36" ry="12" fill="#E9C46A" stroke="#2D3748" stroke-width="2.5"/>
+          <path d="M 155 88 A 25 10 0 0 0 205 88 Z" fill="#2A9D8F" stroke="#2D3748" stroke-width="2"/>
+          <circle cx="168" cy="78" r="5" fill="#F4A261"/>
+          <circle cx="180" cy="79" r="4" fill="#E56B6F"/>
+          <circle cx="192" cy="77" r="6" fill="#4A90E2"/>
+        </g>
+      </svg>
+    </div>
+
+    <h1 class="text-2xl font-black text-[#2D3748] tracking-wide mt-1">🇻🇳 越南會安與峴港</h1>
+    <p class="text-xs font-bold text-[#E56B6F] tracking-wider uppercase mt-0.5">4大3小 6日5夜輕鬆慢遊</p>
+  </header>
+
+  <!-- CONTENT CONTAINER -->
+  <main>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         TAB 1: 🏠 首頁 (HOME) + 匯率計算器
+         ───────────────────────────────────────────────────────────── -->
+    <section id="panel-home" class="tab-content active space-y-4">
+      
+      <!-- Quick Info Cards -->
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-[#FFF9E6] border-doodle-sm p-3 flex flex-col justify-center items-center text-center">
+          <i data-lucide="calendar" class="w-6 h-6 text-amber-600 mb-1"></i>
+          <span class="text-[11px] font-bold text-gray-500">旅行日期</span>
+          <span class="text-sm font-black text-[#2D3748]">3 – 8 Dec 2026</span>
+        </div>
+        <div class="bg-[#E8F5E9] border-doodle-sm p-3 flex flex-col justify-center items-center text-center">
+          <i data-lucide="users" class="w-6 h-6 text-emerald-600 mb-1"></i>
+          <span class="text-[11px] font-bold text-gray-500">成員概況</span>
+          <span class="text-xs font-black text-[#2D3748]">4大 + 3小 (1, 3, 4歲)</span>
+        </div>
+      </div>
+
+      <!-- Currency Converter Card -->
+      <div class="border-doodle p-4">
+        <div class="flex items-center justify-between border-b-2 border-dashed border-gray-300 pb-2.5 mb-3">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="coins" class="w-5 h-5 text-amber-500"></i>
+            <h2 class="font-bold text-base text-[#2D3748]">越盾 ⇄ 港幣 計算器</h2>
+          </div>
+          <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full border border-emerald-300">1 HKD ≈ 3,297 VND</span>
+        </div>
+
+        <div class="space-y-3">
+          <!-- VND Input -->
+          <div class="bg-[#F8F9FA] border-doodle-sm p-2.5 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-xs font-bold bg-[#E8F5E9] text-emerald-800 px-2 py-1 rounded border border-black">VND</span>
+              <span class="text-xs font-bold text-gray-600">越南盾</span>
+            </div>
+            <input type="text" id="input-vnd" placeholder="0" oninput="convertFromVnd()" class="w-36 text-right font-black text-base bg-white border-2 border-gray-400 rounded-lg px-2 py-1 focus:outline-none focus:border-[#2A9D8F]">
+          </div>
+
+          <!-- Switch Indicator -->
+          <div class="flex items-center justify-center space-x-2 text-gray-400 font-bold text-xs">
+            <i data-lucide="arrow-up-down" class="w-4 h-4 text-amber-500"></i>
+            <span>雙向即時換算</span>
+          </div>
+
+          <!-- HKD Input -->
+          <div class="bg-[#F8F9FA] border-doodle-sm p-2.5 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-xs font-bold bg-[#FFE66D] text-amber-900 px-2 py-1 rounded border border-black">HKD</span>
+              <span class="text-xs font-bold text-gray-600">港幣</span>
+            </div>
+            <input type="number" id="input-hkd" placeholder="0" oninput="convertFromHkd()" class="w-36 text-right font-black text-base bg-white border-2 border-gray-400 rounded-lg px-2 py-1 focus:outline-none focus:border-[#2A9D8F]">
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Info Card -->
+      <div class="border-doodle p-4">
+        <div class="flex items-center justify-between border-b-2 border-dashed border-gray-300 pb-2 mb-3">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="plane" class="w-5 h-5 text-blue-500"></i>
+            <h2 class="font-bold text-base text-[#2D3748]">香港航空航班資料</h2>
+          </div>
+          <span class="bg-[#FFE66D] text-[11px] font-bold px-2 py-0.5 rounded-full border border-black">HX548 / HX549</span>
+        </div>
+
+        <!-- Outbound -->
+        <div class="bg-[#F8F9FA] border-doodle-sm p-3 mb-3">
+          <div class="flex justify-between items-center text-xs font-bold text-[#E56B6F] mb-1">
+            <span>去程 • 03 Dec 26 (四)</span>
+            <span class="bg-red-100 px-1.5 py-0.5 rounded border border-red-200">HX548</span>
+          </div>
+          <div class="flex justify-between items-center my-1.5">
+            <div class="text-center">
+              <div class="text-base font-black">14:55</div>
+              <div class="text-[11px] text-gray-500 font-bold">香港 HKG</div>
+            </div>
+            <div class="flex-1 px-3 text-center">
+              <div class="w-full bg-gray-300 h-0.5 relative my-1">
+                <span class="absolute -top-2 left-1/2 -translate-x-1/2 text-xs">✈️</span>
+              </div>
+              <div class="text-[10px] text-emerald-600 font-bold">約 1hr 55m</div>
+            </div>
+            <div class="text-center">
+              <div class="text-base font-black">15:50</div>
+              <div class="text-[11px] text-gray-500 font-bold">峴港 DAD</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inbound -->
+        <div class="bg-[#F8F9FA] border-doodle-sm p-3">
+          <div class="flex justify-between items-center text-xs font-bold text-[#2A9D8F] mb-1">
+            <span>回程 • 08 Dec 26 (二)</span>
+            <span class="bg-teal-100 px-1.5 py-0.5 rounded border border-teal-200">HX549</span>
+          </div>
+          <div class="flex justify-between items-center my-1.5">
+            <div class="text-center">
+              <div class="text-base font-black">16:50</div>
+              <div class="text-[11px] text-gray-500 font-bold">峴港 DAD</div>
+            </div>
+            <div class="flex-1 px-3 text-center">
+              <div class="w-full bg-gray-300 h-0.5 relative my-1">
+                <span class="absolute -top-2 left-1/2 -translate-x-1/2 text-xs">✈️</span>
+              </div>
+              <div class="text-[10px] text-amber-600 font-bold">約 1hr 55m</div>
+            </div>
+            <div class="text-center">
+              <div class="text-base font-black">19:45</div>
+              <div class="text-[11px] text-gray-500 font-bold">香港 HKG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Baby Travel Tips -->
+      <div class="bg-[#FFF3B0] border-doodle p-4">
+        <h3 class="font-bold text-sm mb-2 flex items-center gap-1.5 text-amber-900">
+          <i data-lucide="baby" class="w-5 h-5 text-amber-700"></i>
+          <span>帶 3 個細路溫馨提示</span>
+        </h3>
+        <ul class="text-xs space-y-2 text-gray-800 font-medium leading-relaxed">
+          <li class="flex items-start gap-1.5">
+            <span class="text-amber-600 font-bold">•</span>
+            <span>全程叫 <strong>Grab / 包車</strong> 最方便，不用帶小朋友擠公共交通工具。</span>
+          </li>
+          <li class="flex items-start gap-1.5">
+            <span class="text-amber-600 font-bold">•</span>
+            <span>帶定輕便摺疊 BB 車 / 嬰兒背帶，會安古城路面平坦但晚上人潮較多。</span>
+          </li>
+          <li class="flex items-start gap-1.5">
+            <span class="text-amber-600 font-bold">•</span>
+            <span>在 Villa 叫外賣可以使用 <strong>Grab Food / ShopeeFood</strong>，小朋友累時可留在民宿用餐。</span>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         TAB 2: 🗓️ 日程 (SCHEDULE) - Synchronized with Excel Images
+         ───────────────────────────────────────────────────────────── -->
+    <section id="panel-schedule" class="tab-content">
+      
+      <!-- Day Switcher Buttons -->
+      <div class="flex space-x-2 overflow-x-auto no-scrollbar pb-3 pt-1">
+        <button onclick="switchDay(1)" id="day-btn-1" class="day-nav-btn flex-shrink-0 cursor-pointer bg-white border-2 border-gray-800 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-sm">Day 1 • 12/03</button>
+        <button onclick="switchDay(2)" id="day-btn-2" class="day-nav-btn flex-shrink-0 cursor-pointer bg-white border-2 border-gray-800 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-sm">Day 2 • 12/04</button>
+        <button onclick="switchDay(3)" id="day-btn-3" class="day-nav-btn flex-shrink-0 cursor-pointer bg-white border-2 border-gray-800 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-sm">Day 3 • 12/05</button>
+        <button onclick="switchDay(4)" id="day-btn-4" class="day-nav-btn flex-shrink-0 cursor-pointer bg-white border-2 border-gray-800 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-sm">Day 4 • 12/06</button>
+        <button onclick="switchDay(5)" id="day-btn-5" class="day-nav-btn flex-shrink-0 cursor-pointer bg-white border-2 border-gray-800 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-sm">Day 5 • 12/07</button>
+        <button onclick="switchDay(6)" id="day-btn-6" class="day-nav-btn flex-shrink-0 cursor-pointer bg-white border-2 border-gray-800 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-sm">Day 6 • 12/08</button>
+      </div>
+
+      <!-- DAY PANELS -->
+      <div class="day-panels-container mt-1 space-y-3">
+        
+        <!-- DAY 1 -->
+        <div id="day-panel-1" class="day-panel active space-y-3">
+          <div class="bg-[#FFE29A] border-doodle-sm p-2.5 text-center text-xs font-bold text-[#2D3748]">
+            📍 Day 1 (03 Dec 2026) Thursday: 抵達峴港 ➔ 會安 Airbnb ➔ An Bang 海鮮晚餐 ➔ 按摩
+          </div>
+          
+          <!-- Timeline Item -->
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#4A90E2] text-white px-2 py-0.5 rounded-md">15:50 - 16:45</span>
+              <span class="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-300">✈️ 抵達峴港</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">到達峴港國際機場 ➔ 完成過關</h4>
+            <p class="text-xs text-gray-600">落機辦理入境手續、提取行李。</p>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#2A9D8F] text-white px-2 py-0.5 rounded-md">17:00 - 18:00</span>
+              <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-300">🏡 入住 Villa</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">Grab 出發去會安 Airbnb ➔ 到達會安 Airbnb</h4>
+            <p class="text-xs text-gray-600">地址: An Bang Beach, Hàm Rồng, Hoi An Tay, Da Nang 560000, Vitaman</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=An+Bang+Beach+Hoi+An" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 地圖導航會安 Villa 附近
+            </a>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#E56B6F] text-white px-2 py-0.5 rounded-md">18:30 - 22:00</span>
+              <span class="text-[10px] font-bold bg-pink-100 text-pink-800 px-2 py-0.5 rounded-full border border-pink-300">🦀 晚餐 & 按摩</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">晚餐：An Bang Beach Village Restaurant / 海鮮餐廳</h4>
+            <p class="text-xs text-gray-600">• 21:00 番 Airbnb 休息<br>• 22:00 Airbnb 附近洗頭 / 按摩</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=An+Bang+Beach+Village+Restaurant" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              <i data-lucide="utensils" class="w-3.5 h-3.5"></i> 導航海鮮餐廳
+            </a>
+          </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div id="day-panel-2" class="day-panel space-y-3">
+          <div class="bg-[#FFE29A] border-doodle-sm p-2.5 text-center text-xs font-bold text-[#2D3748]">
+            📍 Day 2 (04 Dec 2026) Friday: 古城特色早餐 ➔ 行古鎮打卡 ➔ 放水燈 ➔ 宵夜
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#4A90E2] text-white px-2 py-0.5 rounded-md">09:00 - 13:00</span>
+              <span class="text-[10px] font-bold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full border border-yellow-300">🍜 早餐 & 午餐</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">早餐: Tom's Sourdough Bakery ➔ 出發去會安古鎮</h4>
+            <p class="text-xs text-gray-600">13:00 午餐: Pho Xua / Pho 會安市場 編號 Lo E015</p>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <a href="https://www.google.com/maps/search/?api=1&query=Tom's+Sourdough+Bakery+Hoi+An" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+                📍 Tom's Bakery
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Pho+Xua+Hoi+An" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+                📍 Pho Xua
+              </a>
+            </div>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#2A9D8F] text-white px-2 py-0.5 rounded-md">14:00 - 18:00</span>
+              <span class="text-[10px] font-bold bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full border border-teal-300">🏮 行街咖啡</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">會安古鎮行街 ➔ 美食地圖</h4>
+            <p class="text-xs text-gray-600">
+              • 15:00 法包: Madam Khanh / Bánh Mì Phượng<br>
+              • 15:30 Coffee: Uncle huan coffee<br>
+              • 18:00 晚餐
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Madam+Khanh+Banh+Mi+Queen" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              📍 Madam Khanh 法包
+            </a>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#E56B6F] text-white px-2 py-0.5 rounded-md">19:00 - 22:00</span>
+              <span class="text-[10px] font-bold bg-pink-100 text-pink-800 px-2 py-0.5 rounded-full border border-pink-300">✨ 水燈 & 宵夜</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">會安古鎮放水燈 ➔ 回民宿 & 宵夜</h4>
+            <p class="text-xs text-gray-600">
+              • 20:30 番 Airbnb 休息<br>
+              • 22:00 宵夜: Greek Souvlaki An Bang Beach
+            </p>
+          </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <div id="day-panel-3" class="day-panel space-y-3">
+          <div class="bg-[#FFE29A] border-doodle-sm p-2.5 text-center text-xs font-bold text-[#2D3748]">
+            📍 Day 3 (05 Dec 2026) Saturday: 珍珠島遊樂園 ➔ 睇動物 ➔ Airbnb BBQ
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#4A90E2] text-white px-2 py-0.5 rounded-md">09:00 - 14:00</span>
+              <span class="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-300">🎡 樂園暢遊</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">早餐: Sunny Coffee Corner ➔ 出發去 Vinwonder 珍珠島遊樂園</h4>
+            <p class="text-xs text-gray-600">
+              • 12:30 午餐: 珍珠島遊樂園內餐廳<br>
+              • 14:00 Vinwonder 珍珠島遊樂園 睇動物 (River Safari)
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=VinWonders+Nam+Hoi+An" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              📍 地圖導航 VinWonders 珍珠島
+            </a>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#2A9D8F] text-white px-2 py-0.5 rounded-md">17:00 - 22:00</span>
+              <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-300">🍖 屋企 BBQ</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">街市買餸 ➔ 返 Airbnb BBQ 派對</h4>
+            <p class="text-xs text-gray-600">
+              • 17:00 街市買餸<br>
+              • 18:00 番 Airbnb 休息<br>
+              • 19:00 晚餐: Airbnb BBQ 燒烤派對<br>
+              • 22:00 Airbnb 附近洗頭 / 按摩
+            </p>
+          </div>
+        </div>
+
+        <!-- DAY 4 -->
+        <div id="day-panel-4" class="day-panel space-y-3">
+          <div class="bg-[#FFE29A] border-doodle-sm p-2.5 text-center text-xs font-bold text-[#2D3748]">
+            📍 Day 4 (06 Dec 2026) Sunday: 轉往峴港 ➔ Pizza 4P's ➔ 美溪沙灘 ➔ Bep Cuon
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#4A90E2] text-white px-2 py-0.5 rounded-md">09:00 - 13:00</span>
+              <span class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full border border-blue-300">📦 轉前往峴港</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">早餐 ➔ 出發前往峴港民宿</h4>
+            <p class="text-xs text-gray-600">
+              • 09:00 早餐: Cháo nghêu Sáu Biểu - Hội An (粥)<br>
+              • 11:00 出發去峴港<br>
+              • 12:00 到達峴港 Airbnb 放行李 (54 Nguyen Duc An Street, Sơn Trà, Đà Nẵng 550000)<br>
+              • 13:00 午餐: Pizza 4P's
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Pizza+4P's+Da+Nang" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              📍 Pizza 4P's 導航
+            </a>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#E56B6F] text-white px-2 py-0.5 rounded-md">14:00 - 22:00</span>
+              <span class="text-[10px] font-bold bg-pink-100 text-pink-800 px-2 py-0.5 rounded-full border border-pink-300">📸 美溪沙灘 & 晚餐</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">龍橋 / 漢市場影相 ➔ 美溪沙灘 ➔ Bep Cuon 晚餐</h4>
+            <p class="text-xs text-gray-600">
+              • 14:00 龍橋 / 漢市場附近行街影相<br>
+              • 15:00 法包: Bánh mì Cô Tiên<br>
+              • 16:30 出發去美溪沙灘 ➔ 17:00 美溪沙灘影相<br>
+              • 18:00 晚餐: Bep Cuon<br>
+              • 20:00 番 Airbnb 休息 ➔ 22:00 Airbnb 附近洗頭 / 按摩
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Bep+Cuon+Da+Nang" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              📍 Bep Cuon 餐廳導航
+            </a>
+          </div>
+        </div>
+
+        <!-- DAY 5 -->
+        <div id="day-panel-5" class="day-panel space-y-3">
+          <div class="bg-[#FFE29A] border-doodle-sm p-2.5 text-center text-xs font-bold text-[#2D3748]">
+            📍 Day 5 (07 Dec 2026) Monday: 三日月水上樂園 ➔ 海鮮大餐 (Bé Ni 2 / ĐẢO XANH)
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#2A9D8F] text-white px-2 py-0.5 rounded-md">09:00 - 16:00</span>
+              <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-300">🏊 室內恆溫水樂園</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">早餐 ➔ 三日月水上樂園玩水</h4>
+            <p class="text-xs text-gray-600">
+              • 09:00 早餐: Caline Coffee & Milktea<br>
+              • 11:00 出發去三日月水上樂園<br>
+              • 13:00 午餐: 三日月水上樂園內餐廳<br>
+              • 14:00 三日月水上樂園 玩水<br>
+              • 16:00 番 Airbnb 沖涼休息
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Da+Nang+Mikazuki+Japanese+Resorts+%26+Spa" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              📍 三日月水上樂園導航
+            </a>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#F4A261] text-white px-2 py-0.5 rounded-md">19:00 - 22:00</span>
+              <span class="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-300">🦐 豐盛海鮮晚宴</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">晚餐: Bé Ni 2 / NHÀ HÀNG ĐẢO XANH (食海鮮)</h4>
+            <p class="text-xs text-gray-600">
+              • 20:00 番 Airbnb 休息<br>
+              • 22:00 Airbnb 附近洗頭 / 按摩
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Be+Ni+2+Da+Nang" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              📍 Bé Ni 2 海鮮餐廳導航
+            </a>
+          </div>
+        </div>
+
+        <!-- DAY 6 -->
+        <div id="day-panel-6" class="day-panel space-y-3">
+          <div class="bg-[#FFE29A] border-doodle-sm p-2.5 text-center text-xs font-bold text-[#2D3748]">
+            📍 Day 6 (08 Dec 2026) Tuesday: GO! 超市買手信 ➔ 商場午餐 ➔ 峴港機場返港
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#2A9D8F] text-white px-2 py-0.5 rounded-md">10:30 - 12:30</span>
+              <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-300">🛒 大採買手信</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">離開 Airbnb ➔ GO! Supermarket Da Nang</h4>
+            <p class="text-xs text-gray-600">
+              • 10:30 離開 Airbnb<br>
+              • 11:00 GO! Supermarket Da Nang 行街買手信<br>
+              • 12:30 午餐: 商場內餐廳
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=GO!+Supermarket+Da+Nang" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+              📍 GO! 超市導航
+            </a>
+          </div>
+
+          <div class="border-doodle p-3 relative space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black bg-[#E56B6F] text-white px-2 py-0.5 rounded-md">14:00 - 19:45</span>
+              <span class="text-[10px] font-bold bg-red-100 text-red-800 px-2 py-0.5 rounded-full border border-red-300">✈️ 順利返港</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-800">出發去機場 ➔ 搭 HX549 返香港</h4>
+            <p class="text-xs text-gray-600">
+              • 14:00 出發去峴港國際機場<br>
+              • 16:50 班機起飛 (HX549)<br>
+              • 19:45 返抵香港國際機場，結束愉快旅程！
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         TAB 3: 🎡 備案 (BACKUP PLANS)
+         ───────────────────────────────────────────────────────────── -->
+    <section id="panel-backup" class="tab-content space-y-3">
+      <div class="bg-[#E8F5E9] border-doodle-sm p-3 text-center">
+        <h3 class="font-black text-sm text-[#2D3748] mb-0.5">🌧️ 雨天 / 備用室內景點</h3>
+        <p class="text-xs text-gray-600">如果落雨或天氣炎熱、小朋友太累時可以輕鬆切換：</p>
+      </div>
+
+      <div class="border-doodle p-3.5 space-y-2">
+        <div class="flex justify-between items-center">
+          <h4 class="font-bold text-sm text-gray-800">☕ Cong Caphe (越共咖啡)</h4>
+          <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full border border-amber-200">室內 Café</span>
+        </div>
+        <p class="text-xs text-gray-600">復古軍綠風格，招牌椰奶沙冰咖啡極受歡迎，大人飲咖啡，小朋友可休息食小食。</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Cong+Caphe+Da+Nang" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+          📍 地圖導航 Cong Caphe
+        </a>
+      </div>
+
+      <div class="border-doodle p-3.5 space-y-2">
+        <div class="flex justify-between items-center">
+          <h4 class="font-bold text-sm text-gray-800">🎨 Art in Paradise 3D 繪畫館</h4>
+          <span class="text-[10px] bg-pink-100 text-pink-800 font-bold px-2 py-0.5 rounded-full border border-pink-200">室內遊樂</span>
+        </div>
+        <p class="text-xs text-gray-600">大型室內 3D 視覺畫展，冷氣開放，非常適合帶 3 歲、4 歲小朋友影互動趣味相片。</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Art+in+Paradise+Da+Nang" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+          📍 地圖導航 3D 繪畫館
+        </a>
+      </div>
+
+      <div class="border-doodle p-3.5 space-y-2">
+        <div class="flex justify-between items-center">
+          <h4 class="font-bold text-sm text-gray-800">🏬 Vincom Plaza Da Nang</h4>
+          <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full border border-blue-200">大型商場</span>
+        </div>
+        <p class="text-xs text-gray-600">備有大型超市、兒童室內遊楽場、多國餐廳與冷氣設備，方便推 BB 車與換尿片。</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Vincom+Plaza+Da+Nang" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 border-doodle-btn">
+          📍 地圖導航 Vincom Plaza
+        </a>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         TAB 4: 🏡 住宿與清單 (STAY & CHECKLIST)
+         ───────────────────────────────────────────────────────────── -->
+    <section id="panel-stay" class="tab-content space-y-4">
+      
+      <!-- Airbnb Accommodation Info -->
+      <div class="border-doodle p-4 space-y-3">
+        <h3 class="font-bold text-sm text-gray-800 flex items-center gap-1.5">
+          <i data-lucide="home" class="w-4 h-4 text-emerald-600"></i>
+          <span>Airbnb 民宿資料</span>
+        </h3>
+        
+        <!-- Hoi An Airbnb -->
+        <div class="bg-[#FFF9E6] border-doodle-sm p-3">
+          <div class="font-bold text-xs text-[#E56B6F] mb-1">📍 會安住宿 (Day 1 - Day 3)</div>
+          <div class="text-xs font-bold text-gray-800 mb-1">會安包棟 Villa</div>
+          <p class="text-[11px] text-gray-600 mb-2">地址: An Bang Beach, Hàm Rồng, Hoi An Tay</p>
+          <a href="https://www.airbnb.com.hk/rooms/1429645946335828167?source_impression_id=p3_1792548031_P3PZvfdZtiG1TcDq" target="_blank" class="inline-flex items-center justify-center w-full py-1.5 bg-[#FF5A5F] text-white text-xs font-bold rounded-lg border border-black border-doodle-btn shadow-sm">
+            🔗 打開 會安 Airbnb 頁面
+          </a>
+        </div>
+
+        <!-- Da Nang Airbnb -->
+        <div class="bg-[#E8F5E9] border-doodle-sm p-3">
+          <div class="font-bold text-xs text-[#2A9D8F] mb-1">📍 峴港住宿 (Day 4 - Day 5)</div>
+          <div class="text-xs font-bold text-gray-800 mb-1">峴港市區 Villa</div>
+          <p class="text-[11px] text-gray-600 mb-2">地址: 54 Nguyen Duc An Street, Sơn Trà, Đà Nẵng</p>
+          <a href="https://www.airbnb.com.hk/rooms/1498502726867804994?source_impression_id=p3_1792548045_P3MK12rnlVxR2goL" target="_blank" class="inline-flex items-center justify-center w-full py-1.5 bg-[#FF5A5F] text-white text-xs font-bold rounded-lg border border-black border-doodle-btn shadow-sm">
+            🔗 打開 峴港 Airbnb 頁面
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive Checklist Card -->
+      <div class="bg-[#FFF9E6] border-doodle p-4">
+        <div class="flex items-center justify-between mb-3 border-b-2 border-dashed border-amber-300 pb-2">
+          <h3 class="font-bold text-sm text-gray-800 flex items-center gap-1.5">
+            <i data-lucide="check-square" class="w-4 h-4 text-emerald-600"></i>
+            <span>出發前 Check-list</span>
+          </h3>
+          <span class="text-[10px] font-bold text-amber-800 bg-amber-200 px-2 py-0.5 rounded-full">點擊標記</span>
+        </div>
+
+        <div id="checklist-container" class="space-y-2.5">
+          <!-- Rendered via JS to maintain interactive check states -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- BOTTOM NAVIGATION BAR -->
+  <nav class="fixed bottom-3 left-0 right-0 max-w-md mx-auto px-4 z-50">
+    <div class="bg-white border-doodle p-1.5 flex justify-around items-center shadow-xl">
+      <button onclick="switchTab('home')" id="nav-btn-home" class="nav-tab-btn flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-xs font-bold text-gray-700 transition-all">
+        <i data-lucide="home" class="w-5 h-5 mb-0.5"></i>
+        <span class="text-[10px]">首頁</span>
+      </button>
+
+      <button onclick="switchTab('schedule')" id="nav-btn-schedule" class="nav-tab-btn flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-xs font-bold text-gray-700 transition-all">
+        <i data-lucide="calendar" class="w-5 h-5 mb-0.5"></i>
+        <span class="text-[10px]">日程</span>
+      </button>
+
+      <button onclick="switchTab('backup')" id="nav-btn-backup" class="nav-tab-btn flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-xs font-bold text-gray-700 transition-all">
+        <i data-lucide="umbrella" class="w-5 h-5 mb-0.5"></i>
+        <span class="text-[10px]">備案</span>
+      </button>
+
+      <button onclick="switchTab('stay')" id="nav-btn-stay" class="nav-tab-btn flex-1 flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-xs font-bold text-gray-700 transition-all">
+        <i data-lucide="check-circle-2" class="w-5 h-5 mb-0.5"></i>
+        <span class="text-[10px]">住宿清單</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- LOGIC / INTERACTION JAVASCRIPT -->
+  <script>
+    // Exchange Rate Logic
+    const RATE = 3297.09; // 1 HKD = 3297.09 VND
+
+    function convertFromVnd() {
+      const vndInput = document.getElementById('input-vnd');
+      const hkdInput = document.getElementById('input-hkd');
+      const rawVal = vndInput.value.replace(/,/g, '');
+      
+      if (rawVal === '' || isNaN(rawVal)) {
+        hkdInput.value = '';
+        return;
+      }
+      const result = parseFloat(rawVal) / RATE;
+      hkdInput.value = result.toFixed(2);
+    }
+
+    function convertFromHkd() {
+      const hkdVal = document.getElementById('input-hkd').value;
+      const vndInput = document.getElementById('input-vnd');
+      
+      if (hkdVal === '' || isNaN(hkdVal)) {
+        vndInput.value = '';
+        return;
+      }
+      const result = parseFloat(hkdVal) * RATE;
+      vndInput.value = Math.round(result).toLocaleString('en-US');
+    }
+
+    // Main Tab Switcher Engine
+    function switchTab(tabKey) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-[#FFE66D]', 'shadow-sm', 'border-2', 'border-black');
+      });
+
+      const activeContent = document.getElementById(`panel-${tabKey}`);
+      if (activeContent) activeContent.classList.add('active');
+
+      const activeNavBtn = document.getElementById(`nav-btn-${tabKey}`);
+      if (activeNavBtn) {
+        activeNavBtn.classList.add('bg-[#FFE66D]', 'shadow-sm', 'border-2', 'border-black');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Day Switcher Engine for Schedule Tab
+    function switchDay(dayNum) {
+      document.querySelectorAll('.day-panel').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.day-nav-btn').forEach(btn => {
+        btn.classList.remove('bg-[#E56B6F]', 'text-white', 'scale-105');
+        btn.classList.add('bg-white', 'text-gray-800');
+      });
+
+      const activeDayPanel = document.getElementById(`day-panel-${dayNum}`);
+      if (activeDayPanel) activeDayPanel.classList.add('active');
+
+      const activeDayBtn = document.getElementById(`day-btn-${dayNum}`);
+      if (activeDayBtn) {
+        activeDayBtn.classList.remove('bg-white', 'text-gray-800');
+        activeDayBtn.classList.add('bg-[#E56B6F]', 'text-white', 'scale-105');
+      }
+    }
+
+    // Interactive Checklist Data
+    const defaultChecklist = [
+      { id: 'item-1', text: '護照正本（有效期6個月以上）', checked: false },
+      { id: 'item-2', text: '越南電子簽證 (E-Visa) 列印本', checked: false },
+      { id: 'item-3', text: '兒童奶粉、奶樽、尿片（帶充足份量）', checked: false },
+      { id: 'item-4', text: '輕便摺疊 BB 車 / 嬰兒背帶', checked: false },
+      { id: 'item-5', text: '小朋友泳衣、水袖、防曬衣物', checked: false },
+      { id: 'item-6', text: '退燒藥、防蚊貼、防蚊水、常備藥品', checked: false },
+      { id: 'item-7', text: '開通 Grab 帳號與設定信用卡支付', checked: false }
+    ];
+
+    function renderChecklist() {
+      const container = document.getElementById('checklist-container');
+      if (!container) return;
+
+      container.innerHTML = defaultChecklist.map((item, index) => `
+        <div onclick="toggleCheck('${item.id}')" class="flex items-center gap-2.5 cursor-pointer bg-white p-2 rounded-xl border border-gray-300 shadow-sm transition-all">
+          <div class="w-5 h-5 rounded-md border-2 border-black flex items-center justify-center font-bold text-xs ${item.checked ? 'bg-[#2A9D8F] text-white' : 'bg-white'}">
+            ${item.checked ? '✓' : ''}
+          </div>
+          <span class="text-xs font-bold ${item.checked ? 'line-through text-gray-400' : 'text-gray-700'}">${item.text}</span>
+        </div>
+      `).join('');
+    }
+
+    function toggleCheck(id) {
+      const target = defaultChecklist.find(i => i.id === id);
+      if (target) {
+        target.checked = !target.checked;
+        renderChecklist();
+      }
+    }
+
+    // Initialization on Page Load
+    window.onload = function() {
+      // Initialize Lucide Icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+      
+      // Default Active States
+      switchTab('home');
+      switchDay(1);
+      renderChecklist();
+    };
+  </script>
+
+</body>
+</html>
